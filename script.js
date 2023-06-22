@@ -21,24 +21,33 @@ var randomSpecial = ["!", "#", "$", "%", "&", "*", "+","-", "/", ":", "@", "{", 
 // console.log(randomLower);
 // console.log(randomSpecial);
 
-function generatePassword() {
-var favNum = window.confirm ("Would you like a number?");
+var compChoiceNum = randomNum[Math.floor(Math.random() * randomNum.length)]
+var compChoiceUpper= randomUpper[Math.floor(Math.random() * randomUpper.length)]
+var compChoiceLower= randomLower[Math.floor(Math.random() * randomLower.length)]
+var compChoiceSpecial= randomSpecial[Math.floor(Math.random() * randomSpecial.length)]
+
+console.log(compChoiceNum);
+console.log(compChoiceUpper);
+console.log(compChoiceLower);
+console.log(compChoiceSpecial);
+
+// function generatePassword() {
 
 // for (var i = 0; i < zooAnimals.length; i++) { 
 //   console.log("I am going to zoo to see " + zooAnimals[i] + ".");
 // }
 
-  return "Hello World";
-}
+//   return "Hello World";
+// }
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
