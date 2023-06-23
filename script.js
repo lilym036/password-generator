@@ -1,53 +1,56 @@
 // Assignment Code
+// Characters
 var generateBtn = document.querySelector("#generate");
 
-var quesOne= prompt("How many characters would you like your password? Choose between 8 and 128");
-var quesTwo= prompt("Would you like to include numbers?");
-var quesThree= prompt("Would you like to include lower case letters?");
-var quesFour= prompt("Would you like to include upper case letters?");
-var quesFive= prompt("Would you like to include special characters?");
-
-var randomNum = confirm("This will include numbers.");
-var randomUpper = confirm("This will include lower case letters.");
-var randomLower = confirm("This will include upper case letters.");
-var randomSpecial = confirm ("This will include special characters.");
-
 var randomNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-var randomUpper = ["a", "b", "c", "d", "e", "f", "g",]
-var randomLower = ["H", "I", "J", "K", "L", "M"]
-var randomSpecial = ["!", "#", "$", "%", "&", "*", "+","-", "/", ":", "@", "{", "~"];
-// console.log(randomNum);
-// console.log(randomUpper);
-// console.log(randomLower);
-// console.log(randomSpecial);
+var randomLower = ["a", "b", "c", "d", "e", "f", "g",]
+var randomUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var randomSpecial = ["!", "#", "$", "%", "&", "*", "+", "-", "/", ":", "@", "{", "~"];
+// We use this array to contain all of the choices that the user has selected
+var userChoices = [];
+var finalPass = "";
 
-var compChoiceNum = randomNum[Math.floor(Math.random() * randomNum.length)]
-var compChoiceUpper= randomUpper[Math.floor(Math.random() * randomUpper.length)]
-var compChoiceLower= randomLower[Math.floor(Math.random() * randomLower.length)]
-var compChoiceSpecial= randomSpecial[Math.floor(Math.random() * randomSpecial.length)]
+function generatePassword() {
+  //Question 1 is a prompt because user has to select a number. 
+  var quesOne = prompt("How many characters would you like your password? Choose between 8 and 128");
+  if (quesOne < 8 || quesOne > 128) {
+    alert("Please enter a number between 8 and 128.");
+  } else {
+  var quesTwo = confirm("Select 'okay' for numbers, select 'cancel' for no numbers.");
+  if (quesTwo) {
+    userChoices += randomNum
+  };
+  var quesThree = confirm("Select okay for upper case, select cancel for no upper case.");
+  if (quesThree) {
+    userChoices += randomUpper
+  };
+  var quesFour = confirm("Select okay for lower case, select cancel for no lower case.");
+  if (quesFour) {
+    userChoices += randomLower
+  }
+  var quesFive = confirm("Select okay for special characters, select cancel for no special characters.");
+  if (quesFive) {
+    userChoices += randomSpecial
+  }
+}
 
-console.log(compChoiceNum);
-console.log(compChoiceUpper);
-console.log(compChoiceLower);
-console.log(compChoiceSpecial);
+var finalPass = "";
+for (var i = 0; i < quesOne; i++) {
+  finalPass += userChoices.charAt(Math.floor(Math.random() * userChoices.length));
+}
+return finalPass;
+}
 
-// function generatePassword() {
-
-// for (var i = 0; i < zooAnimals.length; i++) { 
-//   console.log("I am going to zoo to see " + zooAnimals[i] + ".");
-// }
-
-//   return "Hello World";
-// }
 
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
