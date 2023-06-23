@@ -8,15 +8,16 @@ var randomUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "
 var randomSpecial = ["!", "#", "$", "%", "&", "*", "+", "-", "/", ":", "@", "{", "~"];
 // We use this array to contain all of the choices that the user has selected
 var userChoices = [];
+// We use this 'finalPass' value to save the user password
 var finalPass = "";
 
 function generatePassword() {
-  //Question 1 is a prompt because user has to select a number. 
+  //quesOne is a prompt because user has to select a number. 
   var quesOne = prompt("How many characters would you like your password? Choose between 8 and 128");
   if (quesOne < 8 || quesOne > 128) {
     alert("Please enter a number between 8 and 128.");
   } else {
-  var quesTwo = confirm("Select 'okay' for numbers, select 'cancel' for no numbers.");
+  var quesTwo = confirm("Select okay for numbers, select cancel for no numbers.");
   if (quesTwo) {
     userChoices += randomNum
   };

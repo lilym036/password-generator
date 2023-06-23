@@ -9,13 +9,10 @@ This project was created to allow employees to generate random passwords based o
 N/A
 
 ## Usage
-Open index.html file in the browser. Input numberical number when prompted. Click 'yes' or "no' depending on the criteria presented. 
-Provide instructions and examples for use. Include screenshots as needed.
+Open index.html file in the browser. Click the red 'Generate Password' button to begin. Input number when prompted. Click 'OK' or "cancel' depending on the criteria presented. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![alt text](./images/screenn-shot-3.png);
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
     ```
 
 ## Credits
