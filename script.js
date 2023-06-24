@@ -1,15 +1,15 @@
 // Assignment Code
-// Characters
+
 var generateBtn = document.querySelector("#generate");
 
+// Characters that can be pontentially chosen for a password
 var randomNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 var randomLower = ["a", "b", "c", "d", "e", "f", "g",]
 var randomUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var randomSpecial = ["!", "#", "$", "%", "&", "*", "+", "-", "/", ":", "@", "{", "~"];
 // We use this array to contain all of the choices that the user has selected
 var userChoices = [];
-// We use this 'finalPass' value to save the user password
-var finalPass = "";
+
 
 function generatePassword() {
   //quesOne is a prompt because user has to select a number. 
@@ -34,7 +34,7 @@ function generatePassword() {
     userChoices += randomSpecial
   }
 }
-
+// We use this 'finalPass' value to save the user password
 var finalPass = "";
 for (var i = 0; i < quesOne; i++) {
   finalPass += userChoices.charAt(Math.floor(Math.random() * userChoices.length));

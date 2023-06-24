@@ -1,3 +1,4 @@
+/*general styling*/
 *,
 *::before,
 *::after {
@@ -23,6 +24,7 @@ body {
   padding-right: 20px;
 }
 
+/* header css */
 header {
   text-align: center;
   padding: 20px;
@@ -72,6 +74,7 @@ header {
   clear: both;
 }
 
+/* styling for button */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -118,6 +121,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* media query section which allows website to adapt to multiple screen sizes. */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
