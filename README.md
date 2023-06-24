@@ -13,7 +13,7 @@ Open index.html file in the browser. Click the red 'Generate Password' button to
 
 ![alt text](./images/screenn-shot-3.png);
 
-    ```
+https://lilym036.github.io/password-generator/
 
 ## Credits
 Juno Nguyen- Tutor

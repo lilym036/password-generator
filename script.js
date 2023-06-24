@@ -17,29 +17,29 @@ function generatePassword() {
   if (quesOne < 8 || quesOne > 128) {
     alert("Please enter a number between 8 and 128.");
   } else {
-  var quesTwo = confirm("Select okay for numbers, select cancel for no numbers.");
-  if (quesTwo) {
-    userChoices += randomNum
-  };
-  var quesThree = confirm("Select okay for upper case, select cancel for no upper case.");
-  if (quesThree) {
-    userChoices += randomUpper
-  };
-  var quesFour = confirm("Select okay for lower case, select cancel for no lower case.");
-  if (quesFour) {
-    userChoices += randomLower
+    var quesTwo = confirm("Select okay for numbers, select cancel for no numbers.");
+    if (quesTwo) {
+      userChoices += randomNum
+    };
+    var quesThree = confirm("Select okay for upper case, select cancel for no upper case.");
+    if (quesThree) {
+      userChoices += randomUpper
+    };
+    var quesFour = confirm("Select okay for lower case, select cancel for no lower case.");
+    if (quesFour) {
+      userChoices += randomLower
+    }
+    var quesFive = confirm("Select okay for special characters, select cancel for no special characters.");
+    if (quesFive) {
+      userChoices += randomSpecial
+    }
   }
-  var quesFive = confirm("Select okay for special characters, select cancel for no special characters.");
-  if (quesFive) {
-    userChoices += randomSpecial
+  // We use this 'finalPass' value to save the user password
+  var finalPass = "";
+  for (var i = 0; i < quesOne; i++) {
+    finalPass += userChoices.charAt(Math.floor(Math.random() * userChoices.length));
   }
-}
-// We use this 'finalPass' value to save the user password
-var finalPass = "";
-for (var i = 0; i < quesOne; i++) {
-  finalPass += userChoices.charAt(Math.floor(Math.random() * userChoices.length));
-}
-return finalPass;
+  return finalPass;
 }
 
 
