@@ -16,7 +16,8 @@ Open index.html file in the browser. Click the red 'Generate Password' button to
 https://lilym036.github.io/password-generator/
 
 ## Credits
-Juno Nguyen- Tutor
+Thanks to the following person who helped me in this project:
+<br>Juno Nguyen
 
 ## License
 MIT License
